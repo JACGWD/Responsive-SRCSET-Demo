@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- forces the browser into web standards mode -->
+
+<!-- Warning: All these comments may force the UTF-8 character set definition (line #36) too far down for valiation. Please delete all these comments if you want your code to validate.  -->
+
+<!--
+This code if from the HTML 5 Boilerplate Project, version 6.1.0 https://html5boilerplate.com/
+See: https://github.com/h5bp/html5-boilerplate/blob/master/src/index.html
+ -->
+ <html class="no-js" lang="en">
+ <!-- lang="en" specify language for SEO -->
+
+ <!-- By default the HTML tag gets a class of "no javascript" (.no-js). If javascript is enabled in the browser, Modernizr will automatically change it to whatever the browser is capable of. Use Firebug or any web inspector tool to see this in action. -->
+
+ <head>
+<!-- instructions for the browser start here -->
+
+   <meta charset="utf-8">
+   <!-- UTF is important for non-English characters -->
+   <!-- utf-8 line is important for validation -->
+
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+ <!--
+   <link rel="canonical" href="#" />
+   When posting duplicate content on the web, such as a portfolio picece on gwd.ca and on your own site - point to the "official" version here -->
+
+
+<!-- Start tags important for *basic* Search Engine Optimization here -->
+   <title>Responsive SRCSET Demo</title>
+   <!-- title tag: important for SEO, bookmarks, tab/window label -->
+   <!-- 70 characters or less, use keywords at the beginning -->
+
+
+   <meta name="description" content="Demonstration of using a properly calculated srcset sizes in responsive web design">
+   <!-- description tag: important for SEO -->
+   <!-- 155 characters or less, use keywords -->
+
+   <!-- End tags important for *basic* Search Engine Optimization here -->
+
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- step 1 in designing for mobile -->
+
+   <link rel="stylesheet" href="css/simple-css-reset.css" media="all" />
+<!-- Default CSS reset -->
+
+<style>
+
+img {max-width: 100%; height: auto;}
+figure {margin: 1em auto; border: 1px solid red; padding: 1em;}
+h1 {font-weight: bold; font-size: 1.5em; margin: 1em 0;}
+h2 {font-weight: bold; font-size: 1.2em; margin: 2em 0 0 0;}
+code {font-family: monospace; font-size: 1em; color: #888;}
+p {margin: 1em}
+
+</style>
+
+<meta name="robots" content="noodp, noydir">
+<!-- Force Search Engines to use your metadata and not the info in the Open Directory Project or Yahoo! Directory -->
+
+
+<meta property="author" content="Eric Girouard">
+<!-- content="FirstName LastName" -->
+
+ </head>
+
+ <body>
+
+
+   <header>
+     <h1>Responsive application of SRCSET</h1>
+   </header>
+
+
+<main>
+<h2>Note about "Pixel Pitch"</h2>
+<p>Please view this page with <strong>Firefox</strong> Dev Tools open. Note that in "mobile preview" mode, there is a menu option to change the "DPR" ("Device Pixel Ratio").</p> <p>The DPR is the setting for high resolution screens, such as Apple "Retina" displays. Devices can have DPRs of anywhere from 1 to 4. For example, an iPhone 6/7/8 Plus has a DPR of 3.</p> <p>This means your 200px image on a regular screen requires a 600px image to display properly on an iPhone 8+.</p>
+
+
+<h2>No CSS sizing, no constraints other than viewport size</h2>
+<figure>
+  <img srcset= "img/sample-200.png 200w,
+  img/sample-300.png 300w,
+  img/sample-400.png 400w,
+  img/sample-600.png 600w,
+  img/sample-800.png 800w,
+  img/sample-900.png 900w,
+  img/sample-1200.png 1200w,
+  img/sample-1366.png 1366w,
+  img/sample-1600.png 1600w,
+  img/sample-1800.png 1800w,
+  img/sample-1920.png 1920w"
+  sizes=
+  "(max-width:  320px) 300px,
+   (max-width:  480px) 400px,
+   (max-width:  768px) 700px,
+   (max-width: 1024px) 900px,
+   (max-width: 1366px) 1200px,
+   (max-width: 1600px) 1366px,
+   (max-width: 1920px) 1800px,
+   1920px"
+
+  src="sample-1000.png"
+  alt="Sample image for srcset demo purposes">
+<figcaption>Full width figure tag</figcaption>
+</figure>
+
+<a href="two-column-layout.html">Next: Two Column Layout</a>
+
+
+<pre>
+<code>
+  &lt;style&gt;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  figure {
+    margin: 1em auto;
+    border: 1px solid red;
+    padding: 1em;
+  }
+
+  &lt;/style&gt;
+
+
+
+  &lt;figure&gt;
+    &lt;img srcset= "img/sample-200.png 200w,
+    img/sample-300.png 300w,
+    img/sample-400.png 400w,
+    img/sample-600.png 600w,
+    img/sample-800.png 800w,
+    img/sample-900.png 900w,
+    img/sample-1200.png 1200w,
+    img/sample-1366.png 1366w,
+    img/sample-1600.png 1600w,
+    img/sample-1800.png 1800w,
+    img/sample-1920.png 1920w"
+    sizes=
+    "(max-width:  320px) 300px,
+     (max-width:  480px) 400px,
+     (max-width:  768px) 700px,
+     (max-width: 1024px) 900px,
+     (max-width: 1366px) 1200px,
+     (max-width: 1600px) 1366px,
+     (max-width: 1920px) 1800px,
+     1920px"
+
+    src="sample-1000.png"
+    alt="Sample image for srcset demo purposes"&gt;
+  &lt;/figure&gt;
+</code>
+</pre>
+
+</main>
+
+ </body>
+
+ </html>
